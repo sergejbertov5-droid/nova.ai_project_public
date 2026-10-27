@@ -1,0 +1,8 @@
+{
+  "embedding_model_name": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+  "index_path": "semantic_memory.index",
+  "metadata_path": "semantic_memory.json",
+  "similarity_threshold": 0.3,
+  "max_results": 10,
+  "schema_version": "1.0"
+}

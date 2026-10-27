@@ -1,0 +1,146 @@
+[
+  {
+    "user": "Привет, как дела?",
+    "assistant": "{\"type\": \"answer\", \"text\": \"Приветствую, сэр. Всё в порядке, готов к работе.\"}"
+  },
+  {
+    "user": "Который час?",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"system.time\", \"arguments\": {}}"
+  },
+  {
+    "user": "Открой браузер",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"applications.open\", \"arguments\": {\"app_name\": \"Google Chrome\"}}"
+  },
+  {
+    "user": "Найди в гугле про Python asyncio",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"browser.search\", \"arguments\": {\"query\": \"Python asyncio\"}}"
+  },
+  {
+    "user": "Прочитай страницу",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"browser.read_page\", \"arguments\": {}}"
+  },
+  {
+    "user": "Проверь почту",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"mail.unread\", \"arguments\": {}}"
+  },
+  {
+    "user": "Что нового в телеграме?",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"telegram.unread\", \"arguments\": {}}"
+  },
+  {
+    "user": "Открой YouTube",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"browser.open_url\", \"arguments\": {\"url\": \"https://youtube.com\"}}"
+  },
+  {
+    "user": "Какая сегодня дата?",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"system.date\", \"arguments\": {}}"
+  },
+  {
+    "user": "Сколько места на диске?",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"system.disk\", \"arguments\": {}}"
+  },
+  {
+    "user": "Запомни, что я люблю кофе",
+    "assistant": "{\"type\": \"answer\", \"text\": \"Запомнила.\"}"
+  },
+  {
+    "user": "Что ты обо мне помнишь?",
+    "assistant": "{\"type\": \"answer\", \"text\": \"Я помню: Вы любите кофе.\"}"
+  },
+  {
+    "user": "Открой терминал",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"applications.open\", \"arguments\": {\"app_name\": \"Terminal\"}}"
+  },
+  {
+    "user": "Поищи фильм Интерстеллар на Киного",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"browser.kinogo_search\", \"arguments\": {\"movie\": \"Интерстеллар\"}}"
+  },
+  {
+    "user": "Статус батареи",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"system.battery\", \"arguments\": {}}"
+  },
+  {
+    "user": "Найди информацию о квантовых компьютерах",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"browser.search\", \"arguments\": {\"query\": \"квантовые компьютеры\"}}"
+  },
+  {
+    "user": "Открой GitHub",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"browser.open_url\", \"arguments\": {\"url\": \"https://github.com\"}}"
+  },
+  {
+    "user": "Прочитай открытую вкладку",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"browser.read_page\", \"arguments\": {}}"
+  },
+  {
+    "user": "Нажми на кнопку \"Войти\"",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"browser.click\", \"arguments\": {\"selector\": \"button:has-text('Войти')\"}}"
+  },
+  {
+    "user": "Введи в поиск Python tutorial",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"browser.type\", \"arguments\": {\"selector\": \"input[name='q']\", \"text\": \"Python tutorial\"}}"
+  },
+  {
+    "user": "Покажи последние 5 писем",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"mail.unread\", \"arguments\": {\"limit\": 5}}"
+  },
+  {
+    "user": "Сколько у меня непрочитанных в телеграме?",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"telegram.unread\", \"arguments\": {\"limit\": 10}}"
+  },
+  {
+    "user": "Открой Spotify",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"browser.open_url\", \"arguments\": {\"url\": \"https://open.spotify.com\"}}"
+  },
+  {
+    "user": "Запусти Visual Studio Code",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"applications.open\", \"arguments\": {\"app_name\": \"Visual Studio Code\"}}"
+  },
+  {
+    "user": "Хорошо",
+    "assistant": "{\"type\": \"answer\", \"text\": \"Отлично, сэр. Чем ещё могу помочь?\"}"
+  },
+  {
+    "user": "Спасибо",
+    "assistant": "{\"type\": \"answer\", \"text\": \"Рад был помочь, сэр.\"}"
+  },
+  {
+    "user": "Где я нахожусь?",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"maps.location\", \"arguments\": {}}"
+  },
+  {
+    "user": "Какая погода?",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"maps.weather\", \"arguments\": {}}"
+  },
+  {
+    "user": "Погода в Москве",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"maps.weather\", \"arguments\": {\"city\": \"Москва\"}}"
+  },
+  {
+    "user": "Найди ближайшую кофейню",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"maps.search\", \"arguments\": {\"query\": \"кофейня\"}}"
+  },
+  {
+    "user": "Поищи аптеку рядом",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"maps.search\", \"arguments\": {\"query\": \"аптека\"}}"
+  },
+  {
+    "user": "Проложи маршрут до дома",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"maps.directions\", \"arguments\": {\"destination\": \"дом\"}}"
+  },
+  {
+    "user": "Как дойти до Кремля пешком",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"maps.directions\", \"arguments\": {\"destination\": \"Кремль\", \"transport\": \"walking\"}}"
+  },
+  {
+    "user": "Проверь почту и телеграм",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"mail.unread\", \"arguments\": {}}"
+  },
+  {
+    "user": "Провери входящие",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"telegram.unread\", \"arguments\": {}}"
+  },
+  {
+    "user": "Проверь всё",
+    "assistant": "{\"type\": \"tool_call\", \"tool\": \"mail.unread\", \"arguments\": {}}"
+  }
+]
