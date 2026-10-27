@@ -1,0 +1,92 @@
+# ─── Секреты и личные данные ────────────────────────────────────────────
+# .env хранит все API-ключи, пароль панели и идентификаторы Telegram.
+# Файл создаётся из .env.example и НИКОГДА не коммитится.
+.env
+
+# Сессии Telegram — это ключ аутентификации, а не настройка.
+# Содержимое даёт полный доступ к аккаунту, поэтому исключается
+# целиком, а не по расширению одного файла.
+*.session
+*.session-journal
+*.session-shm
+*.session-wal
+
+# data/ — память, профиль, статистика, состояние Telegram и VPN.
+# Всё создаётся заново при первом запуске, покупателю не нужно.
+data/
+
+# Логи содержат текст личных сообщений и историю работы.
+logs/
+
+# ─── Виртуальные окружения (восстанавливаются из requirements) ──────────
+.venv/
+.venv311/
+kokoro_env/
+xtts_env/
+portaudio/
+
+# ─── Модели и крупные бинарные артефакты ────────────────────────────────
+models/
+piper_models/
+*.tgz
+*.tar.gz
+*.onnx
+*.bin
+
+# ─── Сборочные артефакты ────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.DS_Store
+*.icns
+dist/
+build/
+*.egg-info/
+
+# ─── Сборка macOS-бандлов (.app) ───────────────────────────────────────
+# Это готовые бандлы, а не исходники: их собирает create_launcher.py,
+# в них лежат Mach-O-исполняемые файлы и подпись. К тому же
+# NOVA AI Hologram.app/Contents/Resources/project_dir.txt содержит путь
+# МАШИНЫ С ИМЕНЕМ ПОЛЬЗОВАТЕЛЯ — такой файл в репозитории лишний.
+#
+# Файлы в рабочей копии остаются на месте: autostart их использует
+# (launch_nova_ai_daemon.sh, start_nova_ai_hidden.sh, control_gui.py,
+# core/interactions.py). Исключение из Git их не удаляет и не ломает —
+# оно лишь означает, что репозиторий сам по себе не запускает эти бандлы.
+*.app/
+Contents/MacOS/
+
+# Тестовый звук синтеза речи: генерируется моделью при проверке, весит
+# 168 КБ и к исходникам отношения не имеет.
+kokoro/test.wav
+
+# ─── Прочее ─────────────────────────────────────────────────────────────
+audio_cache/
+*.pid
+
+# ─── Мусорные артефакты ────────────────────────────────────────────────
+.venv2/
+.backup_semantic_*/
+semantic_memory.index
+dependencies_diagnostics.txt
+cinematic_short_film/
+
+# Additional protections for the public source snapshot
+.env.*
+!.env.example
+*.log
+*.jsonl
+*.pem
+*.key
+*.p12
+*.pfx
+*.zip
+*.sqlite
+*.sqlite3
+*.db
+semantic_memory.json
+semantic_memory.index*
+kokoro/*.bin
+kokoro/*.onnx
+kokoro/kokoro/
